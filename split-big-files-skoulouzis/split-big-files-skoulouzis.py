@@ -1,8 +1,8 @@
 import numpy as np
-import laspy
-from webdav3.client import Client
 import pathlib
+from webdav3.client import Client
 import os
+import laspy
 import argparse
 arg_parser = argparse.ArgumentParser()
 
