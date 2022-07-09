@@ -15,7 +15,7 @@ laz_files = args.laz_files
 
 
 
-for file in laz_files:
-    print(file)
+file = laz_files[0]
+print(file)
     
 
