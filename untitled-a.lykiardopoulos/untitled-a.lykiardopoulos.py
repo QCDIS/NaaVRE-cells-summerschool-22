@@ -1,25 +1,14 @@
-import argparse
-arg_parser = argparse.ArgumentParser()
-
-arg_parser.add_argument('--id', action='store', type=str, required=True, dest='id')
-
-arg_parser.add_argument('--data', action='store' , type=str , required='True', dest='data')
-arg_parser.add_argument('--data2', action='store' , type=str , required='True', dest='data2')
 
 
-args = arg_parser.parse_args()
-
-id = args.id
-
-data = args.data
-data2 = args.data2
-
-
-
-proc=data+data2
+data="my data"
+data2="more data"
 
 import json
-filename = "/tmp/proc_" + id + ".json"
-file_proc = open(filename, "w")
-file_proc.write(json.dumps(proc))
-file_proc.close()
+filename = "/tmp/data_" + id + ".json"
+file_data = open(filename, "w")
+file_data.write(json.dumps(data))
+file_data.close()
+filename = "/tmp/data2_" + id + ".json"
+file_data2 = open(filename, "w")
+file_data2.write(json.dumps(data2))
+file_data2.close()
