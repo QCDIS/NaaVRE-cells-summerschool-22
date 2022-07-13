@@ -1,5 +1,5 @@
 
-FROM qcdis/miniconda3-multiply AS build
+FROM qcdis/miniconda3 AS build
 COPY test-cell-b.garcia-environment.yaml .
 RUN conda env update -f test-cell-b.garcia-environment.yaml
 RUN conda-pack -n venv -o /tmp/env.tar && \
