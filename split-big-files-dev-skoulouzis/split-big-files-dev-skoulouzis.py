@@ -1,8 +1,8 @@
 from webdav3.client import Client
+import os
+import pathlib
 import numpy as np
 import laspy
-import pathlib
-import os
 
 import argparse
 arg_parser = argparse.ArgumentParser()
@@ -21,16 +21,16 @@ laz_files = args.laz_files
 
 param_username = args.param_username
 
-conf_remote_path_ahn = conf_remote_path_root
-conf_remote_path_split = pathlib.Path(conf_remote_path_root + '/split_'+param_username)
-conf_wd_opts = { 'webdav_hostname': conf_hostname, 'webdav_login': conf_login, 'webdav_password': conf_password}
+conf_remote_path_split = pathlib.Path( '/webdav/LAZ' + '/split_'+param_username)
+conf_wd_opts = { 'webdav_hostname':  'https://lfw-ds001-i022.lifewatch.dev:32443/', 'webdav_login':  '20BNXDdL8mg24OaD', 'webdav_password':  'zDoy0hNKkcnsdsQ@OYAVd'}
 conf_max_filesize = '262144000'  # desired max file size (in bytes)
+conf_remote_path_ahn =  '/webdav/LAZ'
 conf_laz_compression_factor = '7'
 
-conf_remote_path_ahn = conf_remote_path_root
-conf_remote_path_split = pathlib.Path(conf_remote_path_root + '/split_'+param_username)
-conf_wd_opts = { 'webdav_hostname': conf_hostname, 'webdav_login': conf_login, 'webdav_password': conf_password}
+conf_remote_path_split = pathlib.Path( '/webdav/LAZ' + '/split_'+param_username)
+conf_wd_opts = { 'webdav_hostname':  'https://lfw-ds001-i022.lifewatch.dev:32443/', 'webdav_login':  '20BNXDdL8mg24OaD', 'webdav_password':  'zDoy0hNKkcnsdsQ@OYAVd'}
 conf_max_filesize = '262144000'  # desired max file size (in bytes)
+conf_remote_path_ahn =  '/webdav/LAZ'
 conf_laz_compression_factor = '7'
 
 
