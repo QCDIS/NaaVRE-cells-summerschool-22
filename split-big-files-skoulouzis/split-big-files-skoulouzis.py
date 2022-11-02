@@ -1,8 +1,8 @@
 import pathlib
-from webdav3.client import Client
-import numpy as np
-import laspy
 import os
+from webdav3.client import Client
+import laspy
+import numpy as np
 
 import argparse
 arg_parser = argparse.ArgumentParser()
@@ -21,17 +21,17 @@ laz_files = args.laz_files
 
 param_username = args.param_username
 
+conf_remote_path_ahn = conf_remote_path_root
 conf_remote_path_split = pathlib.Path(conf_remote_path_root + '/split_'+param_username)
-conf_laz_compression_factor = '7'
 conf_wd_opts = { 'webdav_hostname': conf_hostname, 'webdav_login': conf_login, 'webdav_password': conf_password}
 conf_max_filesize = '262144000'  # desired max file size (in bytes)
-conf_remote_path_ahn = conf_remote_path_root
+conf_laz_compression_factor = '7'
 
+conf_remote_path_ahn = conf_remote_path_root
 conf_remote_path_split = pathlib.Path(conf_remote_path_root + '/split_'+param_username)
-conf_laz_compression_factor = '7'
 conf_wd_opts = { 'webdav_hostname': conf_hostname, 'webdav_login': conf_login, 'webdav_password': conf_password}
 conf_max_filesize = '262144000'  # desired max file size (in bytes)
-conf_remote_path_ahn = conf_remote_path_root
+conf_laz_compression_factor = '7'
 
 
 def save_chunk_to_laz_file(in_filename, 
