@@ -1,6 +1,20 @@
-import pathlib
 from laserfarm.remote_utils import get_wdclient
 from laserfarm.remote_utils import list_remote
+import pathlib
+
+import argparse
+arg_parser = argparse.ArgumentParser()
+
+arg_parser.add_argument('--id', action='store', type=str, required=True, dest='id')
+
+
+
+args = arg_parser.parse_args()
+print(args)
+
+id = args.id
+
+
 
 conf_remote_path_ahn =  '/webdav/LAZ'
 conf_wd_opts = { 'webdav_hostname':  'https://lfw-ds001-i022.lifewatch.dev:32443/', 'webdav_login':  '20BNXDdL8mg24OaD', 'webdav_password':  'zDoy0hNKkcnsdsQ@OYAVd'}
